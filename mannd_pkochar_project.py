@@ -5,12 +5,12 @@ from collections import Counter
 # from pprint import pprint
 from statistics import median, mean
 import math
+from nltk import sent_tokenize, word_tokenize
 from numpy import array, concatenate
 import numpy as np
-from sklearn.svm import SVC
-from sklearn.model_selection import cross_val_score
-from sklearn.neural_network import MLPClassifier
 import re
+
+import pyphen
 
 # ================= Preprocessing ===================
 
@@ -21,9 +21,13 @@ def get_all_files(directory):
     else:
         return sorted([os.path.join(directory, fn) for fn in next(os.walk(directory))[2]])
 
+
+def load_file_excerpts(filename):
+    return [line for line in open(filename, "r")]
+
+
 # This calls the bash script that makes the file list and calls
 # both of the core nlp commands
-
 def get_xml_files():
     command = "run_corenlp.sh"
     process = subprocess.Popen(command, stdout=subprocess.PIPE)
@@ -33,9 +37,23 @@ def get_xml_files():
 def flatten(listoflists):
     return [elem for l in listoflists for elem in l]
 
+def convert_to_files():
+    with open("/home1/c/cis530/project/data/project_train.txt", 'r') as inFile:
+        i = 0
+        for line in inFile:
+            i += 1
+            with open('test_excerpt_' + str(i), "w") as out:
+                out.write(line)
 
+    with open("/home1/c/cis530/project/data/project_test.txt", 'r') as inFile:
+        i = 0
+        for line in inFile:
+            i += 1
+            with open('train_excerpt_' + str(i), "w") as out:
+                out.write(line)
 
 # ================== Unigram Model ==============
+
 
 class UnigramModel:
     # freqmodel is a filename with word,count on each line
@@ -53,43 +71,25 @@ class UnigramModel:
         return math.log(self.counter[target_word] / self.n, 2)
 
 
-def construct_fm(filename):
-    excerpts = load_file_excerpts(filename)
-    counts = collections.Counter(flatten(excerpts))
-
-    with open(os.path.basename(
-          os.path.splitext(filename)[0] + "_fm.txt"), "w") as file:
-        for word in counts:
-            file.write(word + "," + str(counts[word])+"\n")
-
-
-def make_fms(directory):
-    for file in get_all_files(directory):
-        construct_fm(file)
-
 
 #  ================== Various Feature Calculations ==================
 
-def calculate_part21(freqmodel, filename):
-    um = UnigramModel(freqmodel)
-    nyt = UnigramModel("nytimes_fm.txt")
-    vocab_size = len(um.counter)
-    frac_freq = len([k for k, v in um.counter.items() if v > 5]) / vocab_size
-    frac_rare = len([k for k, v in um.counter.items() if v == 1]) / vocab_size
+mannd_pkochar_dic = pyphen.Pyphen(lang='en_US')
 
-    word_lengths = [len(k) for k, v in um.counter.items() for x in range(0, v)]
+def calculate_word_features(excerpt):
+    words = word_tokenize(excerpt.lower())
+    counter = Counter(words)
+    word_lengths = [len(k) for k, v in counter.items() for x in range(0, v)]
     median_word = median(word_lengths)
     average_word = mean(word_lengths)
-    words_not_in_nyt = len([k for k in um.counter if k not in nyt.counter])
-    frac_nyt = words_not_in_nyt / len(um.counter)
+    avg_sentence_length = mean([len(s) for s in sent_tokenize(excerpt)])
+    type_token_ratio = len(counter) / sum(counter.values())
+    syllables = [len(mannd_pkochar_dic.inserted(w).split('-')) for w in words]
+    prop_few_syll = sum([0 if s < 5 else 1 for s in syllables]) / len(words)
+    prop_many_syll = 1 - prop_few_syll
 
-# Part 2.2 #
-
-
-def get_type_token_ratio(counts_file):
-    um = UnigramModel(counts_file)
-    return len(um.counter) / um.n
-
+    return [median_word, average_word, prop_few_syll, prop_many_syll,
+            avg_sentence_length, type_token_ratio]
 
 # ================== POS =====================
 
@@ -424,6 +424,5 @@ def part_10():
     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 
-if __name__ == "__main__":
-
-    pass
+# if __name__ == "__main__":
+#     pass
