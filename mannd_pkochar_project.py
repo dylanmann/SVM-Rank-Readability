@@ -343,23 +343,24 @@ def make_X(test_dir, train_dir):
     print("making magic happen for " + test_dir)
     return concatenate((
         createWordFeat(test_dir),
-        # pos_vecs,
-        createUniversalPOSFeat(pos_vecs, pos_tags, g_map, uni_tags)), 1)
-        # createNERFeat(xml_dir),
-        # createDependencyFeat(xml_dir, dep_list),
-        # # createSyntaticProductionFeat(xml_dir, all_rules),
-        # createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
+        pos_vecs,
+        createUniversalPOSFeat(pos_vecs, pos_tags, g_map, uni_tags),
+        createNERFeat(test_dir),
+        createDependencyFeat(test_dir, dep_list),
+        # createSyntaticProductionFeat(xml_dir, all_rules),
+        createBrownClusterFeat(test_dir, cluster_codes, wc_map)), 1)
 
-def generate_svm_rank_file():
+
+def generate_svm_rank_train():
     # try:
     #     X_train = np.load("x_train2.npy")
     # except:
-    X_train = make_X("xml/train","xml/train")
-    np.save("x_train_baseline", X_train)
+    X_train = make_X("xml/train", "xml/train")
+    np.save("x_train_no_syntax", X_train)
     y = open("data/project_train_scores.txt", "r").read().splitlines()
 
-    outfile = open("train_baseline.dat", "w")
-    print("running svm file generator")
+    outfile = open("train_no_syntax.dat", "w")
+    print("running svm file generator train")
     for i in range(0, len(X_train)):
         outfile.write(y[i] + " qid:1 ")
         for j in range(1, len(X_train[0]) + 1):
@@ -373,11 +374,10 @@ def generate_svm_rank_test():
     #     X_train = np.load("x_train2.npy")
     # except:
     X_test = make_X("xml/test", "xml/train")
-    np.save("x_test_baseline", X_test)
-    # y = open("data/project_train_scores.txt", "r").read().splitlines()
+    np.save("x_test_no_syntax", X_test)
 
-    outfile = open("test_baseline.dat", "w")
-    print("running svm file generator")
+    outfile = open("test_no_syntax.dat", "w")
+    print("running svm file generator test")
     for i in range(0, len(X_test)):
         outfile.write("1 qid:1 ")
         for j in range(1, len(X_test[0]) + 1):
@@ -386,83 +386,6 @@ def generate_svm_rank_test():
         outfile.write("\n")
 
 
-# def make_classifier_run():
-#     try:
-#         X_test = np.load("x_test.npy")
-#     except:
-#         X_test = make_X("xml/test")
-#         np.save("x_test", X_test)
-
-#     try:
-#         X_train = np.load("x_train.npy")
-#     except:
-#         X_train = make_X("xml/train")
-#         np.save("x_train", X_train)
-
-#     y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
-
-#     print("running classifier")
-#     run_classifier(X_train, y, X_test, "m.txt")
-
-
-# ======================= Cross Validation and Actual Stuff =====================
-
-# def cross_validation(X_train, y_train):
-#     clf = SVC(verbose=True)
-#     clf.fit(X_train, y_train)
-#     return cross_val_score(clf, X_train, y_train, cv=5)
-
-
-# def cross_validation_nn(X_train, y_train):
-#     clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2),
-#                         random_state=1)
-#     clf.fit(X_train, y_train)
-#     return cross_val_score(clf, X_train, y_train, cv=5)
-
-
-# def experiment_X(xml_dir):
-#     brown_file = "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
-#     pos_tags = open("output/hw3_4-1.txt", "r").read().splitlines()
-#     entity_list = open("output/hw3_5-1.txt", "r").read().splitlines()
-#     dep_list = open("output/hw3_6-1.txt", "r").read().splitlines()
-#     all_rules = open("output/hw3_7-1.txt", "r").read().splitlines()
-#     cluster_codes = generate_word_cluster_codes(brown_file)
-#     wc_map = generate_word_cluster_mapping(brown_file)
-#     g_map = get_google_map()
-#     uni_tags = sorted(g_map.values())
-
-#     pos_vecs = createPOSFeat(xml_dir, pos_tags)
-
-#     print("making magic happen for " + xml_dir)
-#     return concatenate((
-#         createDependencyFeat(xml_dir, dep_list),
-#         createSyntaticProductionFeat(xml_dir, all_rules),
-#         createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
-
-
-# def part_10():
-#     print("testing")
-#     try:
-#         X_test = np.load("x_test.npy")
-#     except:
-#         X_test = experiment_X("xml/test")
-#         np.save("x_test", X_test)
-
-#     print("training")
-#     try:
-#         X_train = np.load("x_train.npy")
-#     except:
-#         X_train = experiment_X("xml/train")
-#         np.save("x_train", X_train)
-
-#     y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
-
-#     print("running classifier")
-
-#     scores = cross_validation_nn(X_train, y)
-#     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
-
-
 if __name__ == "__main__":
-    # generate_svm_rank_file()
+    generate_svm_rank_train()
     generate_svm_rank_test()
