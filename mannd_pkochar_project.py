@@ -5,7 +5,6 @@ from collections import Counter
 # from pprint import pprint
 from statistics import median, mean
 import math
-from nltk import sent_tokenize, word_tokenize
 from numpy import array, concatenate
 import numpy as np
 import re
@@ -16,10 +15,7 @@ import pyphen
 
 
 def get_all_files(directory):
-    if directory == "xml/test":
-        return sorted([os.path.join(directory, fn) for fn in next(os.walk(directory))[2]], key=lambda x: int(re.search(r'\d+', x).group()))
-    else:
-        return sorted([os.path.join(directory, fn) for fn in next(os.walk(directory))[2]])
+    return sorted([os.path.join(directory, fn) for fn in next(os.walk(directory))[2]], key=lambda x: int(re.search(r'\d+', x).group()))
 
 
 def load_file_excerpts(filename):
@@ -36,6 +32,7 @@ def get_xml_files():
 
 def flatten(listoflists):
     return [elem for l in listoflists for elem in l]
+
 
 def convert_to_files():
     with open("/home1/c/cis530/project/data/project_train.txt", 'r') as inFile:
@@ -71,44 +68,37 @@ class UnigramModel:
         return math.log(self.counter[target_word] / self.n, 2)
 
 
-
 #  ================== Various Feature Calculations ==================
+
 
 mannd_pkochar_dic = pyphen.Pyphen(lang='en_US')
 
 
-def map_word_features(xml_filename, pos_tag_list):
-    tags = Counter()
+def map_word_features(xml_filename):
     with open(xml_filename, "r") as file:
         element = ET.parse(file)
-        POS_xpath = "./document/sentences/sentence/tokens/token/POS"
-        [element.findall(token_xpath)]
-
-    # total counts
-    n = sum(tags.values())
-
-    # avoid div by 0
-    if (n == 0):
-        print("0 sucks")
-        return [0 for dep in pos_tag_list]
-
-    # return frequency of each tag in the file
-    return [tags[tag] / n for tag in pos_tag_list]
+        word_xpath = "./document/sentences/sentence/tokens/token/word"
+        sentence_xpath = "./document/sentences/sentence"
+        sent_token_xpath = "./tokens/token"
+        words = [word.text.lower() for word in element.findall(word_xpath)]
+        sentences = [sent.findall(sent_token_xpath) for sent in element.findall(sentence_xpath)]
+    return calculate_word_features(words, sentences)
 
 
-def calculate_word_features(words):
+def calculate_word_features(words, sentences):
     counter = Counter(words)
     word_lengths = [len(k) for k, v in counter.items() for x in range(0, v)]
     median_word = median(word_lengths)
     average_word = mean(word_lengths)
-    avg_sentence_length = mean([len(s) for s in sent_tokenize(excerpt)])
+    avg_sentence_length = mean(len(sent) for sent in sentences)
+    num_sentences = len(sentences)
     type_token_ratio = len(counter) / sum(counter.values())
     syllables = [len(mannd_pkochar_dic.inserted(w).split('-')) for w in words]
     prop_few_syll = sum([0 if s < 5 else 1 for s in syllables]) / len(words)
     prop_many_syll = 1 - prop_few_syll
 
     return [median_word, average_word, prop_few_syll, prop_many_syll,
-            avg_sentence_length, type_token_ratio]
+            avg_sentence_length, num_sentences, type_token_ratio]
 
 # ================== POS =====================
 
@@ -164,35 +154,32 @@ def get_google_map():
 
 
 # returns all unique NER tags from all documents in directory
-def extract_ner_tags(xml_dir):
-    tags = set()
-    xpath = "./document/sentences/sentence/tokens/token/NER"
-    for filename in get_all_files(xml_dir):
-        with open(filename, "r") as file:
-            element = ET.parse(file)
+# def extract_ner_tags(xml_dir):
+#     tags = set()
+#     xpath = "./document/sentences/sentence/tokens/token/NER"
+#     for filename in get_all_files(xml_dir):
+#         with open(filename, "r") as file:
+#             element = ET.parse(file)
 
-            for i in element.findall(xpath):
-                tags.add(i.text)
+#             for i in element.findall(xpath):
+#                 tags.add(i.text)
 
-    return sorted(list(tags))
+#     return sorted(list(tags))
 
 
-def map_named_entity_tags(xml_filename, entity_list):
-    tags = Counter()
+def map_named_entity_tags(xml_filename):
+    tags = 0
 
     xpath = "./document/sentences/sentence/tokens/token/NER"
     with open(xml_filename, "r") as file:
         element = ET.parse(file)
         for i in element.findall(xpath):
-            tags[i.text] += 1
+            tags += 1
 
-    n = sum(tags.values())
+    word_xpath = "./document/sentences/sentence/tokens/token/word"
+    n = len(element.findall(word_xpath))
 
-    if (n == 0):
-        print("0 sucks")
-        return [0 for dep in entity_list]
-
-    return [tags[tag] / n for tag in entity_list]
+    return [tags/n]
 
 # ============================ Dependency Parsing =======================
 
@@ -300,6 +287,12 @@ def map_brown_clusters(xml_file_path, cluster_code_list, word_cluster_mapping):
 # ======================= Creating Features ========================
 
 
+def createWordFeat(xml_dir):
+    files = get_all_files(xml_dir)
+    feats = [map_word_features(f) for f in files]
+    return array(feats)
+
+
 def createPOSFeat(xml_dir, pos_tag_list):
     files = get_all_files(xml_dir)
     feats = [map_pos_tags(f, pos_tag_list) for f in files]
@@ -311,9 +304,9 @@ def createUniversalPOSFeat(pos_vecs, p_tags, g_map, uni_tags):
     return array(feats)
 
 
-def createNERFeat(xml_dir, entity_list):
+def createNERFeat(xml_dir):
     files = get_all_files(xml_dir)
-    return array([map_named_entity_tags(file, entity_list) for file in files])
+    return array([map_named_entity_tags(file) for file in files])
 
 
 def createDependencyFeat(xml_dir, dep_list):
@@ -334,114 +327,142 @@ def createBrownClusterFeat(xml_dir, cluster_codes, wc_map):
 # ======================= Part 9.3 ========================
 
 
-def make_X(xml_dir):
+def make_X(test_dir, train_dir):
     brown_file = "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
-    pos_tags = open("output/hw3_4-1.txt", "r").read().splitlines()
-    entity_list = open("output/hw3_5-1.txt", "r").read().splitlines()
-    dep_list = open("output/hw3_6-1.txt", "r").read().splitlines()
-    all_rules = open("output/hw3_7-1.txt", "r").read().splitlines()
+    pos_tags = extract_pos_tags(train_dir)
+    # entity_list = extract_ner_tags(xml_dir)
+    dep_list = extract_dependencies(test_dir)
+    # all_rules = extract_prod_rules(xml_dir)
     cluster_codes = generate_word_cluster_codes(brown_file)
     wc_map = generate_word_cluster_mapping(brown_file)
     g_map = get_google_map()
     uni_tags = sorted(g_map.values())
 
-    pos_vecs = createPOSFeat(xml_dir, pos_tags)
+    pos_vecs = createPOSFeat(test_dir, pos_tags)
 
-    print("making magic happen for " + xml_dir)
+    print("making magic happen for " + test_dir)
     return concatenate((
-        pos_vecs,
-        createUniversalPOSFeat(pos_vecs, pos_tags, g_map, uni_tags),
-        createNERFeat(xml_dir, entity_list),
-        createDependencyFeat(xml_dir, dep_list),
-        createSyntaticProductionFeat(xml_dir, all_rules),
-        createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
+        createWordFeat(test_dir),
+        # pos_vecs,
+        createUniversalPOSFeat(pos_vecs, pos_tags, g_map, uni_tags)), 1)
+        # createNERFeat(xml_dir),
+        # createDependencyFeat(xml_dir, dep_list),
+        # # createSyntaticProductionFeat(xml_dir, all_rules),
+        # createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
+
+def generate_svm_rank_file():
+    # try:
+    #     X_train = np.load("x_train2.npy")
+    # except:
+    X_train = make_X("xml/train","xml/train")
+    np.save("x_train_baseline", X_train)
+    y = open("data/project_train_scores.txt", "r").read().splitlines()
+
+    outfile = open("train_baseline.dat", "w")
+    print("running svm file generator")
+    for i in range(0, len(X_train)):
+        outfile.write(y[i] + " qid:1 ")
+        for j in range(1, len(X_train[0]) + 1):
+            if X_train[i][j-1] == 0: continue
+            outfile.write(str(j) + ":" + str(X_train[i][j-1]) + " ")
+        outfile.write("\n")
 
 
-def make_classifier_run():
-    try:
-        X_test = np.load("x_test.npy")
-    except:
-        X_test = make_X("xml/test")
-        np.save("x_test", X_test)
+def generate_svm_rank_test():
+    # try:
+    #     X_train = np.load("x_train2.npy")
+    # except:
+    X_test = make_X("xml/test", "xml/train")
+    np.save("x_test_baseline", X_test)
+    # y = open("data/project_train_scores.txt", "r").read().splitlines()
 
-    try:
-        X_train = np.load("x_train.npy")
-    except:
-        X_train = make_X("xml/train")
-        np.save("x_train", X_train)
-
-    y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
-
-    print("running classifier")
-    run_classifier(X_train, y, X_test, "m.txt")
+    outfile = open("test_baseline.dat", "w")
+    print("running svm file generator")
+    for i in range(0, len(X_test)):
+        outfile.write("1 qid:1 ")
+        for j in range(1, len(X_test[0]) + 1):
+            if X_test[i][j-1] == 0: continue
+            outfile.write(str(j) + ":" + str(X_test[i][j-1]) + " ")
+        outfile.write("\n")
 
 
-def run_classifier(X_train, y_train, X_test, predicted_labels_file):
-    clf = SVC(verbose=True)
-    clf.fit(X_train, y_train)
-    predictions = clf.predict(X_test)
-    with open(predicted_labels_file, "w") as file:
-        for p in predictions:
-            file.write(str(p) + "\n")
+# def make_classifier_run():
+#     try:
+#         X_test = np.load("x_test.npy")
+#     except:
+#         X_test = make_X("xml/test")
+#         np.save("x_test", X_test)
+
+#     try:
+#         X_train = np.load("x_train.npy")
+#     except:
+#         X_train = make_X("xml/train")
+#         np.save("x_train", X_train)
+
+#     y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
+
+#     print("running classifier")
+#     run_classifier(X_train, y, X_test, "m.txt")
 
 
 # ======================= Cross Validation and Actual Stuff =====================
 
-def cross_validation(X_train, y_train):
-    clf = SVC(verbose=True)
-    clf.fit(X_train, y_train)
-    return cross_val_score(clf, X_train, y_train, cv=5)
+# def cross_validation(X_train, y_train):
+#     clf = SVC(verbose=True)
+#     clf.fit(X_train, y_train)
+#     return cross_val_score(clf, X_train, y_train, cv=5)
 
 
-def cross_validation_nn(X_train, y_train):
-    clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2),
-                        random_state=1)
-    clf.fit(X_train, y_train)
-    return cross_val_score(clf, X_train, y_train, cv=5)
+# def cross_validation_nn(X_train, y_train):
+#     clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2),
+#                         random_state=1)
+#     clf.fit(X_train, y_train)
+#     return cross_val_score(clf, X_train, y_train, cv=5)
 
 
-def experiment_X(xml_dir):
-    brown_file = "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
-    pos_tags = open("output/hw3_4-1.txt", "r").read().splitlines()
-    entity_list = open("output/hw3_5-1.txt", "r").read().splitlines()
-    dep_list = open("output/hw3_6-1.txt", "r").read().splitlines()
-    all_rules = open("output/hw3_7-1.txt", "r").read().splitlines()
-    cluster_codes = generate_word_cluster_codes(brown_file)
-    wc_map = generate_word_cluster_mapping(brown_file)
-    g_map = get_google_map()
-    uni_tags = sorted(g_map.values())
+# def experiment_X(xml_dir):
+#     brown_file = "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
+#     pos_tags = open("output/hw3_4-1.txt", "r").read().splitlines()
+#     entity_list = open("output/hw3_5-1.txt", "r").read().splitlines()
+#     dep_list = open("output/hw3_6-1.txt", "r").read().splitlines()
+#     all_rules = open("output/hw3_7-1.txt", "r").read().splitlines()
+#     cluster_codes = generate_word_cluster_codes(brown_file)
+#     wc_map = generate_word_cluster_mapping(brown_file)
+#     g_map = get_google_map()
+#     uni_tags = sorted(g_map.values())
 
-    pos_vecs = createPOSFeat(xml_dir, pos_tags)
+#     pos_vecs = createPOSFeat(xml_dir, pos_tags)
 
-    print("making magic happen for " + xml_dir)
-    return concatenate((
-        createDependencyFeat(xml_dir, dep_list),
-        createSyntaticProductionFeat(xml_dir, all_rules),
-        createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
-
-
-def part_10():
-    print("testing")
-    try:
-        X_test = np.load("x_test.npy")
-    except:
-        X_test = experiment_X("xml/test")
-        np.save("x_test", X_test)
-
-    print("training")
-    try:
-        X_train = np.load("x_train.npy")
-    except:
-        X_train = experiment_X("xml/train")
-        np.save("x_train", X_train)
-
-    y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
-
-    print("running classifier")
-
-    scores = cross_validation_nn(X_train, y)
-    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+#     print("making magic happen for " + xml_dir)
+#     return concatenate((
+#         createDependencyFeat(xml_dir, dep_list),
+#         createSyntaticProductionFeat(xml_dir, all_rules),
+#         createBrownClusterFeat(xml_dir, cluster_codes, wc_map)), 1)
 
 
-# if __name__ == "__main__":
-#     pass
+# def part_10():
+#     print("testing")
+#     try:
+#         X_test = np.load("x_test.npy")
+#     except:
+#         X_test = experiment_X("xml/test")
+#         np.save("x_test", X_test)
+
+#     print("training")
+#     try:
+#         X_train = np.load("x_train.npy")
+#     except:
+#         X_train = experiment_X("xml/train")
+#         np.save("x_train", X_train)
+
+#     y = array([1 if f[10] == 'g' else 0 for f in get_all_files("xml/train")])
+
+#     print("running classifier")
+
+#     scores = cross_validation_nn(X_train, y)
+#     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+
+if __name__ == "__main__":
+    # generate_svm_rank_file()
+    generate_svm_rank_test()
