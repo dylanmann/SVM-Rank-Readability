@@ -1,0 +1,3142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Muscle</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>magnetic</word>
+            <lemma>magnetic</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>resonance</word>
+            <lemma>resonance</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>imaging</word>
+            <lemma>imaging</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>42</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>43</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>innovative</word>
+            <lemma>innovative</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>tool</word>
+            <lemma>tool</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>exploring</word>
+            <lemma>explore</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>focal</word>
+            <lemma>focal</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>81</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>neuropathies</word>
+            <lemma>neuropathy</lemma>
+            <CharacterOffsetBegin>82</CharacterOffsetBegin>
+            <CharacterOffsetEnd>94</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>94</CharacterOffsetBegin>
+            <CharacterOffsetEnd>95</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NP (NN Muscle)) (NP (JJ magnetic) (NN resonance) (NN imaging))) (PRN (-LRB- -LRB-) (NP (NNP MRI)) (-RRB- -RRB-))) (VP (VBZ is) (NP (NP (DT an) (JJ innovative) (NN tool)) (PP (IN for) (S (VP (VBG exploring) (NP (JJ focal) (NNS neuropathies))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">tool</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">imaging</governor>
+            <dependent idx="2">magnetic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">imaging</governor>
+            <dependent idx="3">resonance</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="4">imaging</dependent>
+          </dep>
+          <dep type="abbrev">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="11">tool</governor>
+            <dependent idx="8">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">tool</governor>
+            <dependent idx="9">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">tool</governor>
+            <dependent idx="10">innovative</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">tool</governor>
+            <dependent idx="12">for</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="12">for</governor>
+            <dependent idx="13">exploring</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">neuropathies</governor>
+            <dependent idx="14">focal</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="13">exploring</governor>
+            <dependent idx="15">neuropathies</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">tool</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">imaging</governor>
+            <dependent idx="2">magnetic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">imaging</governor>
+            <dependent idx="3">resonance</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="4">imaging</dependent>
+          </dep>
+          <dep type="abbrev">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="11">tool</governor>
+            <dependent idx="8">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">tool</governor>
+            <dependent idx="9">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">tool</governor>
+            <dependent idx="10">innovative</dependent>
+          </dep>
+          <dep type="prepc_for">
+            <governor idx="11">tool</governor>
+            <dependent idx="13">exploring</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">neuropathies</governor>
+            <dependent idx="14">focal</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="13">exploring</governor>
+            <dependent idx="15">neuropathies</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">tool</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">imaging</governor>
+            <dependent idx="2">magnetic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">imaging</governor>
+            <dependent idx="3">resonance</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="4">imaging</dependent>
+          </dep>
+          <dep type="abbrev">
+            <governor idx="1">Muscle</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="11">tool</governor>
+            <dependent idx="8">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="11">tool</governor>
+            <dependent idx="9">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">tool</governor>
+            <dependent idx="10">innovative</dependent>
+          </dep>
+          <dep type="prepc_for">
+            <governor idx="11">tool</governor>
+            <dependent idx="13">exploring</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="15">neuropathies</governor>
+            <dependent idx="14">focal</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="13">exploring</governor>
+            <dependent idx="15">neuropathies</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>However</word>
+            <lemma>however</lemma>
+            <CharacterOffsetBegin>96</CharacterOffsetBegin>
+            <CharacterOffsetEnd>103</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>103</CharacterOffsetBegin>
+            <CharacterOffsetEnd>104</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>its</word>
+            <lemma>its</lemma>
+            <CharacterOffsetBegin>105</CharacterOffsetBegin>
+            <CharacterOffsetEnd>108</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>usefulness</word>
+            <lemma>usefulness</lemma>
+            <CharacterOffsetBegin>109</CharacterOffsetBegin>
+            <CharacterOffsetEnd>119</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>120</CharacterOffsetBegin>
+            <CharacterOffsetEnd>122</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>mild</word>
+            <lemma>mild</lemma>
+            <CharacterOffsetBegin>123</CharacterOffsetBegin>
+            <CharacterOffsetEnd>127</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>127</CharacterOffsetBegin>
+            <CharacterOffsetEnd>128</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>proximal</word>
+            <lemma>proximal</lemma>
+            <CharacterOffsetBegin>129</CharacterOffsetBegin>
+            <CharacterOffsetEnd>137</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>137</CharacterOffsetBegin>
+            <CharacterOffsetEnd>138</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>139</CharacterOffsetBegin>
+            <CharacterOffsetEnd>141</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>chronic</word>
+            <lemma>chronic</lemma>
+            <CharacterOffsetBegin>142</CharacterOffsetBegin>
+            <CharacterOffsetEnd>149</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>lesions</word>
+            <lemma>lesion</lemma>
+            <CharacterOffsetBegin>150</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>157</CharacterOffsetBegin>
+            <CharacterOffsetEnd>158</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>when</word>
+            <lemma>when</lemma>
+            <CharacterOffsetBegin>159</CharacterOffsetBegin>
+            <CharacterOffsetEnd>163</CharacterOffsetEnd>
+            <POS>WRB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>electromyography</word>
+            <lemma>electromyography</lemma>
+            <CharacterOffsetBegin>164</CharacterOffsetBegin>
+            <CharacterOffsetEnd>180</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>181</CharacterOffsetBegin>
+            <CharacterOffsetEnd>182</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>EMG</word>
+            <lemma>emg</lemma>
+            <CharacterOffsetBegin>182</CharacterOffsetBegin>
+            <CharacterOffsetEnd>185</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>185</CharacterOffsetBegin>
+            <CharacterOffsetEnd>186</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>186</CharacterOffsetBegin>
+            <CharacterOffsetEnd>187</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>187</CharacterOffsetBegin>
+            <CharacterOffsetEnd>188</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>189</CharacterOffsetBegin>
+            <CharacterOffsetEnd>192</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>current</word>
+            <lemma>current</lemma>
+            <CharacterOffsetBegin>193</CharacterOffsetBegin>
+            <CharacterOffsetEnd>200</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>PRESENT_REF</NormalizedNER>
+            <Timex tid="t1" type="DATE">PRESENT_REF</Timex>
+          </token>
+          <token id="23">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>201</CharacterOffsetBegin>
+            <CharacterOffsetEnd>202</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="24">
+            <word>``</word>
+            <lemma>``</lemma>
+            <CharacterOffsetBegin>202</CharacterOffsetBegin>
+            <CharacterOffsetEnd>203</CharacterOffsetEnd>
+            <POS>``</POS>
+            <NER>O</NER>
+          </token>
+          <token id="25">
+            <word>gold</word>
+            <lemma>gold</lemma>
+            <CharacterOffsetBegin>203</CharacterOffsetBegin>
+            <CharacterOffsetEnd>207</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="26">
+            <word>standard</word>
+            <lemma>standard</lemma>
+            <CharacterOffsetBegin>208</CharacterOffsetBegin>
+            <CharacterOffsetEnd>216</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="27">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>216</CharacterOffsetBegin>
+            <CharacterOffsetEnd>217</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="28">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>217</CharacterOffsetBegin>
+            <CharacterOffsetEnd>218</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="29">
+            <word>sensitivity</word>
+            <lemma>sensitivity</lemma>
+            <CharacterOffsetBegin>219</CharacterOffsetBegin>
+            <CharacterOffsetEnd>230</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="30">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>231</CharacterOffsetBegin>
+            <CharacterOffsetEnd>233</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="31">
+            <word>inadequate</word>
+            <lemma>inadequate</lemma>
+            <CharacterOffsetBegin>234</CharacterOffsetBegin>
+            <CharacterOffsetEnd>244</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="32">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>244</CharacterOffsetBegin>
+            <CharacterOffsetEnd>245</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="33">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>245</CharacterOffsetBegin>
+            <CharacterOffsetEnd>246</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="34">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>247</CharacterOffsetBegin>
+            <CharacterOffsetEnd>250</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="35">
+            <word>yet</word>
+            <lemma>yet</lemma>
+            <CharacterOffsetBegin>251</CharacterOffsetBegin>
+            <CharacterOffsetEnd>254</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="36">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>255</CharacterOffsetBegin>
+            <CharacterOffsetEnd>257</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="37">
+            <word>be</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>258</CharacterOffsetBegin>
+            <CharacterOffsetEnd>260</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="38">
+            <word>studied</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>261</CharacterOffsetBegin>
+            <CharacterOffsetEnd>268</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="39">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>268</CharacterOffsetBegin>
+            <CharacterOffsetEnd>269</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (ADVP (RB However)) (, ,) (NP (NP (PRP$ its) (NN usefulness)) (PP (IN in) (NP (NP (NP (JJ mild)) (, ,) (NP (JJ proximal)) (, ,) (CC or) (NP (JJ chronic) (NNS lesions))) (, ,) (SBAR (WHADVP (WRB when)) (S (NP (NP (NP (NN electromyography)) (NP (-LRB- -LRB-) (NN EMG) (-RRB- -RRB-)) (, ,) ('' '')) (NP (DT the))) (ADJP (JJ current))))))) ('' '') (`` ``) (NP (JJ gold) (NN standard)) ('' '') ('' '') (NP (NN sensitivity)) (VP (VBZ is) (ADJP (JJ inadequate)) ('' '') (, ,) (SBAR (S (VP (VBZ has) (ADVP (RB yet)) (S (VP (TO to) (VP (VB be) (VP (VBN studied))))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="advmod">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="3">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="4">usefulness</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">in</governor>
+            <dependent idx="6">mild</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="6">mild</governor>
+            <dependent idx="8">proximal</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="6">mild</governor>
+            <dependent idx="10">or</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">lesions</governor>
+            <dependent idx="11">chronic</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="6">mild</governor>
+            <dependent idx="12">lesions</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="22">current</governor>
+            <dependent idx="14">when</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="22">current</governor>
+            <dependent idx="15">electromyography</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="17">EMG</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="21">the</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">mild</governor>
+            <dependent idx="22">current</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="26">standard</governor>
+            <dependent idx="25">gold</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="26">standard</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="29">sensitivity</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="30">is</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="34">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="34">has</governor>
+            <dependent idx="35">yet</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="38">studied</governor>
+            <dependent idx="36">to</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="38">studied</governor>
+            <dependent idx="37">be</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="34">has</governor>
+            <dependent idx="38">studied</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="advmod">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="3">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="4">usefulness</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="6">mild</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="6">mild</governor>
+            <dependent idx="8">proximal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">lesions</governor>
+            <dependent idx="11">chronic</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="6">mild</governor>
+            <dependent idx="12">lesions</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="22">current</governor>
+            <dependent idx="14">when</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="22">current</governor>
+            <dependent idx="15">electromyography</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="17">EMG</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="21">the</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">mild</governor>
+            <dependent idx="22">current</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="26">standard</governor>
+            <dependent idx="25">gold</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="26">standard</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="29">sensitivity</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="30">is</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="34">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="34">has</governor>
+            <dependent idx="35">yet</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="38">studied</governor>
+            <dependent idx="36">to</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="38">studied</governor>
+            <dependent idx="37">be</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="34">has</governor>
+            <dependent idx="38">studied</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="advmod">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="3">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="4">usefulness</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="6">mild</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="8">proximal</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="6">mild</governor>
+            <dependent idx="8">proximal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">lesions</governor>
+            <dependent idx="11">chronic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">usefulness</governor>
+            <dependent idx="12">lesions</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="6">mild</governor>
+            <dependent idx="12">lesions</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="22">current</governor>
+            <dependent idx="14">when</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="22">current</governor>
+            <dependent idx="15">electromyography</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="17">EMG</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="15">electromyography</governor>
+            <dependent idx="21">the</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">mild</governor>
+            <dependent idx="22">current</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="26">standard</governor>
+            <dependent idx="25">gold</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="26">standard</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="29">sensitivity</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="30">is</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="31">inadequate</governor>
+            <dependent idx="34">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="34">has</governor>
+            <dependent idx="35">yet</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="38">studied</governor>
+            <dependent idx="36">to</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="38">studied</governor>
+            <dependent idx="37">be</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="34">has</governor>
+            <dependent idx="38">studied</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="3">
+        <tokens>
+          <token id="1">
+            <word>Clinical</word>
+            <lemma>clinical</lemma>
+            <CharacterOffsetBegin>271</CharacterOffsetBegin>
+            <CharacterOffsetEnd>279</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>279</CharacterOffsetBegin>
+            <CharacterOffsetEnd>280</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>281</CharacterOffsetBegin>
+            <CharacterOffsetEnd>284</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>284</CharacterOffsetBegin>
+            <CharacterOffsetEnd>285</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>286</CharacterOffsetBegin>
+            <CharacterOffsetEnd>289</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>EMG</word>
+            <lemma>emg</lemma>
+            <CharacterOffsetBegin>290</CharacterOffsetBegin>
+            <CharacterOffsetEnd>293</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>examinations</word>
+            <lemma>examination</lemma>
+            <CharacterOffsetBegin>294</CharacterOffsetBegin>
+            <CharacterOffsetEnd>306</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>were</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>307</CharacterOffsetBegin>
+            <CharacterOffsetEnd>311</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>performed</word>
+            <lemma>perform</lemma>
+            <CharacterOffsetBegin>312</CharacterOffsetBegin>
+            <CharacterOffsetEnd>321</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>322</CharacterOffsetBegin>
+            <CharacterOffsetEnd>324</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>113</word>
+            <lemma>113</lemma>
+            <CharacterOffsetBegin>325</CharacterOffsetBegin>
+            <CharacterOffsetEnd>328</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>113.0</NormalizedNER>
+          </token>
+          <token id="12">
+            <word>muscles</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>329</CharacterOffsetBegin>
+            <CharacterOffsetEnd>336</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>337</CharacterOffsetBegin>
+            <CharacterOffsetEnd>339</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>17</word>
+            <lemma>17</lemma>
+            <CharacterOffsetBegin>340</CharacterOffsetBegin>
+            <CharacterOffsetEnd>342</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>17.0</NormalizedNER>
+          </token>
+          <token id="15">
+            <word>consecutive</word>
+            <lemma>consecutive</lemma>
+            <CharacterOffsetBegin>343</CharacterOffsetBegin>
+            <CharacterOffsetEnd>354</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>355</CharacterOffsetBegin>
+            <CharacterOffsetEnd>363</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>364</CharacterOffsetBegin>
+            <CharacterOffsetEnd>368</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>clinically</word>
+            <lemma>clinically</lemma>
+            <CharacterOffsetBegin>369</CharacterOffsetBegin>
+            <CharacterOffsetEnd>379</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>diagnosed</word>
+            <lemma>diagnose</lemma>
+            <CharacterOffsetBegin>380</CharacterOffsetBegin>
+            <CharacterOffsetEnd>389</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>lower</word>
+            <lemma>lower</lemma>
+            <CharacterOffsetBegin>390</CharacterOffsetBegin>
+            <CharacterOffsetEnd>395</CharacterOffsetEnd>
+            <POS>JJR</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>limb</word>
+            <lemma>limb</lemma>
+            <CharacterOffsetBegin>396</CharacterOffsetBegin>
+            <CharacterOffsetEnd>400</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>focal</word>
+            <lemma>focal</lemma>
+            <CharacterOffsetBegin>401</CharacterOffsetBegin>
+            <CharacterOffsetEnd>406</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="23">
+            <word>neuropathies</word>
+            <lemma>neuropathy</lemma>
+            <CharacterOffsetBegin>407</CharacterOffsetBegin>
+            <CharacterOffsetEnd>419</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="24">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>419</CharacterOffsetBegin>
+            <CharacterOffsetEnd>420</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (JJ Clinical)) (, ,) (NP (NNP MRI)) (, ,) (CC and) (NP (NN EMG) (NNS examinations))) (VP (VBD were) (VP (VBN performed) (PP (IN in) (NP (NP (CD 113) (NNS muscles)) (PP (IN of) (NP (CD 17) (JJ consecutive) (NNS patients))))) (PP (IN with) (NP (ADJP (RB clinically) (S (VP (VBN diagnosed) (NP (JJR lower) (NN limb))))) (JJ focal) (NNS neuropathies))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubjpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="1">Clinical</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="3">MRI</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">examinations</governor>
+            <dependent idx="6">EMG</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="7">examinations</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="8">were</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">performed</governor>
+            <dependent idx="10">in</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">muscles</governor>
+            <dependent idx="11">113</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">in</governor>
+            <dependent idx="12">muscles</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">muscles</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="16">patients</governor>
+            <dependent idx="14">17</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">patients</governor>
+            <dependent idx="15">consecutive</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="16">patients</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">performed</governor>
+            <dependent idx="17">with</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="18">clinically</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="18">clinically</governor>
+            <dependent idx="19">diagnosed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">limb</governor>
+            <dependent idx="20">lower</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="19">diagnosed</governor>
+            <dependent idx="21">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="22">focal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="17">with</governor>
+            <dependent idx="23">neuropathies</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubjpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="1">Clinical</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="3">MRI</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">examinations</governor>
+            <dependent idx="6">EMG</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="7">examinations</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="8">were</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">muscles</governor>
+            <dependent idx="11">113</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="9">performed</governor>
+            <dependent idx="12">muscles</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="16">patients</governor>
+            <dependent idx="14">17</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">patients</governor>
+            <dependent idx="15">consecutive</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">muscles</governor>
+            <dependent idx="16">patients</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="18">clinically</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="18">clinically</governor>
+            <dependent idx="19">diagnosed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">limb</governor>
+            <dependent idx="20">lower</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="19">diagnosed</governor>
+            <dependent idx="21">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="22">focal</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="9">performed</governor>
+            <dependent idx="23">neuropathies</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubjpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="1">Clinical</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="3">MRI</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="3">MRI</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">examinations</governor>
+            <dependent idx="6">EMG</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Clinical</governor>
+            <dependent idx="7">examinations</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="7">examinations</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="9">performed</governor>
+            <dependent idx="8">were</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">muscles</governor>
+            <dependent idx="11">113</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="9">performed</governor>
+            <dependent idx="12">muscles</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="16">patients</governor>
+            <dependent idx="14">17</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="16">patients</governor>
+            <dependent idx="15">consecutive</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">muscles</governor>
+            <dependent idx="16">patients</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="18">clinically</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="18">clinically</governor>
+            <dependent idx="19">diagnosed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">limb</governor>
+            <dependent idx="20">lower</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="19">diagnosed</governor>
+            <dependent idx="21">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="23">neuropathies</governor>
+            <dependent idx="22">focal</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="9">performed</governor>
+            <dependent idx="23">neuropathies</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="4">
+        <tokens>
+          <token id="1">
+            <word>The</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>421</CharacterOffsetBegin>
+            <CharacterOffsetEnd>424</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>sensitivity</word>
+            <lemma>sensitivity</lemma>
+            <CharacterOffsetBegin>425</CharacterOffsetBegin>
+            <CharacterOffsetEnd>436</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>437</CharacterOffsetBegin>
+            <CharacterOffsetEnd>440</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>specificity</word>
+            <lemma>specificity</lemma>
+            <CharacterOffsetBegin>441</CharacterOffsetBegin>
+            <CharacterOffsetEnd>452</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>453</CharacterOffsetBegin>
+            <CharacterOffsetEnd>455</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>456</CharacterOffsetBegin>
+            <CharacterOffsetEnd>459</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>460</CharacterOffsetBegin>
+            <CharacterOffsetEnd>463</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>EMG</word>
+            <lemma>EMG</lemma>
+            <CharacterOffsetBegin>464</CharacterOffsetBegin>
+            <CharacterOffsetEnd>467</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="9">
+            <word>were</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>468</CharacterOffsetBegin>
+            <CharacterOffsetEnd>472</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>evaluated</word>
+            <lemma>evaluate</lemma>
+            <CharacterOffsetBegin>473</CharacterOffsetBegin>
+            <CharacterOffsetEnd>482</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>483</CharacterOffsetBegin>
+            <CharacterOffsetEnd>485</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>relation</word>
+            <lemma>relation</lemma>
+            <CharacterOffsetBegin>486</CharacterOffsetBegin>
+            <CharacterOffsetEnd>494</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>495</CharacterOffsetBegin>
+            <CharacterOffsetEnd>497</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>disease</word>
+            <lemma>disease</lemma>
+            <CharacterOffsetBegin>498</CharacterOffsetBegin>
+            <CharacterOffsetEnd>505</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>duration</word>
+            <lemma>duration</lemma>
+            <CharacterOffsetBegin>506</CharacterOffsetBegin>
+            <CharacterOffsetEnd>514</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>514</CharacterOffsetBegin>
+            <CharacterOffsetEnd>515</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>severity</word>
+            <lemma>severity</lemma>
+            <CharacterOffsetBegin>516</CharacterOffsetBegin>
+            <CharacterOffsetEnd>524</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>524</CharacterOffsetBegin>
+            <CharacterOffsetEnd>525</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>526</CharacterOffsetBegin>
+            <CharacterOffsetEnd>529</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>anatomical</word>
+            <lemma>anatomical</lemma>
+            <CharacterOffsetBegin>530</CharacterOffsetBegin>
+            <CharacterOffsetEnd>540</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>location</word>
+            <lemma>location</lemma>
+            <CharacterOffsetBegin>541</CharacterOffsetBegin>
+            <CharacterOffsetEnd>549</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>549</CharacterOffsetBegin>
+            <CharacterOffsetEnd>550</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (DT The) (NN sensitivity) (CC and) (NN specificity)) (PP (IN of) (NP (NNP MRI) (CC and) (NNP EMG)))) (VP (VBD were) (VP (VBN evaluated) (PP (IN in) (NP (NN relation))) (PP (TO to) (NP (NP (NN disease) (NN duration)) (, ,) (NP (NN severity)) (, ,) (CC and) (NP (JJ anatomical) (NN location)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="2">sensitivity</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="3">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="4">specificity</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="5">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">of</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="6">MRI</governor>
+            <dependent idx="7">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="6">MRI</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="9">were</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="11">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="11">in</governor>
+            <dependent idx="12">relation</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="13">to</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">duration</governor>
+            <dependent idx="14">disease</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">to</governor>
+            <dependent idx="15">duration</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="15">duration</governor>
+            <dependent idx="17">severity</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="15">duration</governor>
+            <dependent idx="19">and</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">location</governor>
+            <dependent idx="20">anatomical</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="15">duration</governor>
+            <dependent idx="21">location</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="2">sensitivity</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="4">specificity</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">MRI</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="9">were</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="12">relation</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">duration</governor>
+            <dependent idx="14">disease</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="15">duration</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="15">duration</governor>
+            <dependent idx="17">severity</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">location</governor>
+            <dependent idx="20">anatomical</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="15">duration</governor>
+            <dependent idx="21">location</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="2">sensitivity</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="4">specificity</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="4">specificity</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="6">MRI</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">sensitivity</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">MRI</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="9">were</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="12">relation</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">duration</governor>
+            <dependent idx="14">disease</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="15">duration</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="17">severity</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="15">duration</governor>
+            <dependent idx="17">severity</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="21">location</governor>
+            <dependent idx="20">anatomical</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="10">evaluated</governor>
+            <dependent idx="21">location</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="15">duration</governor>
+            <dependent idx="21">location</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="5">
+        <tokens>
+          <token id="1">
+            <word>Muscle</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>552</CharacterOffsetBegin>
+            <CharacterOffsetEnd>558</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>559</CharacterOffsetBegin>
+            <CharacterOffsetEnd>562</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>was</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>563</CharacterOffsetBegin>
+            <CharacterOffsetEnd>566</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>highly</word>
+            <lemma>highly</lemma>
+            <CharacterOffsetBegin>567</CharacterOffsetBegin>
+            <CharacterOffsetEnd>573</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>sensitive</word>
+            <lemma>sensitive</lemma>
+            <CharacterOffsetBegin>574</CharacterOffsetBegin>
+            <CharacterOffsetEnd>583</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>584</CharacterOffsetBegin>
+            <CharacterOffsetEnd>587</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>588</CharacterOffsetBegin>
+            <CharacterOffsetEnd>591</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>detection</word>
+            <lemma>detection</lemma>
+            <CharacterOffsetBegin>592</CharacterOffsetBegin>
+            <CharacterOffsetEnd>601</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>602</CharacterOffsetBegin>
+            <CharacterOffsetEnd>604</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>denervated</word>
+            <lemma>denervate</lemma>
+            <CharacterOffsetBegin>605</CharacterOffsetBegin>
+            <CharacterOffsetEnd>615</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>muscle</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>616</CharacterOffsetBegin>
+            <CharacterOffsetEnd>622</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>622</CharacterOffsetBegin>
+            <CharacterOffsetEnd>623</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>624</CharacterOffsetBegin>
+            <CharacterOffsetEnd>627</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>627</CharacterOffsetBegin>
+            <CharacterOffsetEnd>628</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>unlike</word>
+            <lemma>unlike</lemma>
+            <CharacterOffsetBegin>629</CharacterOffsetBegin>
+            <CharacterOffsetEnd>635</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>EMG</word>
+            <lemma>emg</lemma>
+            <CharacterOffsetBegin>636</CharacterOffsetBegin>
+            <CharacterOffsetEnd>639</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="17">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>639</CharacterOffsetBegin>
+            <CharacterOffsetEnd>640</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>its</word>
+            <lemma>its</lemma>
+            <CharacterOffsetBegin>641</CharacterOffsetBegin>
+            <CharacterOffsetEnd>644</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>sensitivity</word>
+            <lemma>sensitivity</lemma>
+            <CharacterOffsetBegin>645</CharacterOffsetBegin>
+            <CharacterOffsetEnd>656</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>did</word>
+            <lemma>do</lemma>
+            <CharacterOffsetBegin>657</CharacterOffsetBegin>
+            <CharacterOffsetEnd>660</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>not</word>
+            <lemma>not</lemma>
+            <CharacterOffsetBegin>661</CharacterOffsetBegin>
+            <CharacterOffsetEnd>664</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>decrease</word>
+            <lemma>decrease</lemma>
+            <CharacterOffsetBegin>665</CharacterOffsetBegin>
+            <CharacterOffsetEnd>673</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="23">
+            <word>regardless</word>
+            <lemma>regardless</lemma>
+            <CharacterOffsetBegin>674</CharacterOffsetBegin>
+            <CharacterOffsetEnd>684</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="24">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>685</CharacterOffsetBegin>
+            <CharacterOffsetEnd>687</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="25">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>688</CharacterOffsetBegin>
+            <CharacterOffsetEnd>691</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="26">
+            <word>anatomical</word>
+            <lemma>anatomical</lemma>
+            <CharacterOffsetBegin>692</CharacterOffsetBegin>
+            <CharacterOffsetEnd>702</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="27">
+            <word>location</word>
+            <lemma>location</lemma>
+            <CharacterOffsetBegin>703</CharacterOffsetBegin>
+            <CharacterOffsetEnd>711</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="28">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>711</CharacterOffsetBegin>
+            <CharacterOffsetEnd>712</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="29">
+            <word>duration</word>
+            <lemma>duration</lemma>
+            <CharacterOffsetBegin>713</CharacterOffsetBegin>
+            <CharacterOffsetEnd>721</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="30">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>721</CharacterOffsetBegin>
+            <CharacterOffsetEnd>722</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="31">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>723</CharacterOffsetBegin>
+            <CharacterOffsetEnd>725</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="32">
+            <word>severity</word>
+            <lemma>severity</lemma>
+            <CharacterOffsetBegin>726</CharacterOffsetBegin>
+            <CharacterOffsetEnd>734</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="33">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>735</CharacterOffsetBegin>
+            <CharacterOffsetEnd>737</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="34">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>738</CharacterOffsetBegin>
+            <CharacterOffsetEnd>741</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="35">
+            <word>neuropathy</word>
+            <lemma>neuropathy</lemma>
+            <CharacterOffsetBegin>742</CharacterOffsetBegin>
+            <CharacterOffsetEnd>752</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="36">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>752</CharacterOffsetBegin>
+            <CharacterOffsetEnd>753</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (S (NP (NN Muscle) (NNP MRI)) (VP (VBD was) (ADJP (RB highly) (JJ sensitive) (PP (IN for) (NP (NP (DT the) (NN detection)) (PP (IN of) (S (VP (VBN denervated) (NP (NN muscle)))))))))) (, ,) (CC and) (S (, ,) (PP (IN unlike) (NP (NN EMG))) (, ,) (NP (PRP$ its) (NN sensitivity)) (VP (VBD did) (RB not) (VP (VB decrease) (ADVP (RB regardless) (PP (IN of) (NP (NP (DT the) (JJ anatomical) (NN location)) (, ,) (NP (NN duration)) (, ,) (CC or) (NP (NP (NN severity)) (PP (IN of) (NP (DT the) (NN neuropathy)))))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="3">was</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="4">highly</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="6">for</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">detection</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">for</governor>
+            <dependent idx="8">detection</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">detection</governor>
+            <dependent idx="9">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="9">of</governor>
+            <dependent idx="10">denervated</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">denervated</governor>
+            <dependent idx="11">muscle</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="13">and</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="22">decrease</governor>
+            <dependent idx="15">unlike</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="15">unlike</governor>
+            <dependent idx="16">EMG</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="19">sensitivity</governor>
+            <dependent idx="18">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="22">decrease</governor>
+            <dependent idx="19">sensitivity</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="22">decrease</governor>
+            <dependent idx="20">did</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="22">decrease</governor>
+            <dependent idx="21">not</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="22">decrease</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="22">decrease</governor>
+            <dependent idx="23">regardless</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">regardless</governor>
+            <dependent idx="24">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="27">location</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="27">location</governor>
+            <dependent idx="26">anatomical</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="24">of</governor>
+            <dependent idx="27">location</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="27">location</governor>
+            <dependent idx="29">duration</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="27">location</governor>
+            <dependent idx="31">or</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="27">location</governor>
+            <dependent idx="32">severity</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="32">severity</governor>
+            <dependent idx="33">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="35">neuropathy</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="33">of</governor>
+            <dependent idx="35">neuropathy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="3">was</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="4">highly</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">detection</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="8">detection</dependent>
+          </dep>
+          <dep type="prepc_of">
+            <governor idx="8">detection</governor>
+            <dependent idx="10">denervated</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">denervated</governor>
+            <dependent idx="11">muscle</dependent>
+          </dep>
+          <dep type="prep_unlike">
+            <governor idx="22">decrease</governor>
+            <dependent idx="16">EMG</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="19">sensitivity</governor>
+            <dependent idx="18">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="22">decrease</governor>
+            <dependent idx="19">sensitivity</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="22">decrease</governor>
+            <dependent idx="20">did</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="22">decrease</governor>
+            <dependent idx="21">not</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="22">decrease</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="27">location</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="27">location</governor>
+            <dependent idx="26">anatomical</dependent>
+          </dep>
+          <dep type="prep_regardless_of">
+            <governor idx="22">decrease</governor>
+            <dependent idx="27">location</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="27">location</governor>
+            <dependent idx="29">duration</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="27">location</governor>
+            <dependent idx="32">severity</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="35">neuropathy</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="32">severity</governor>
+            <dependent idx="35">neuropathy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="3">was</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="4">highly</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">detection</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="8">detection</dependent>
+          </dep>
+          <dep type="prepc_of">
+            <governor idx="8">detection</governor>
+            <dependent idx="10">denervated</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">denervated</governor>
+            <dependent idx="11">muscle</dependent>
+          </dep>
+          <dep type="prep_unlike">
+            <governor idx="22">decrease</governor>
+            <dependent idx="16">EMG</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="19">sensitivity</governor>
+            <dependent idx="18">its</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="22">decrease</governor>
+            <dependent idx="19">sensitivity</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="22">decrease</governor>
+            <dependent idx="20">did</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="22">decrease</governor>
+            <dependent idx="21">not</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">sensitive</governor>
+            <dependent idx="22">decrease</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="27">location</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="27">location</governor>
+            <dependent idx="26">anatomical</dependent>
+          </dep>
+          <dep type="prep_regardless_of">
+            <governor idx="22">decrease</governor>
+            <dependent idx="27">location</dependent>
+          </dep>
+          <dep type="prep_regardless_of">
+            <governor idx="22">decrease</governor>
+            <dependent idx="29">duration</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="27">location</governor>
+            <dependent idx="29">duration</dependent>
+          </dep>
+          <dep type="prep_regardless_of">
+            <governor idx="22">decrease</governor>
+            <dependent idx="32">severity</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="27">location</governor>
+            <dependent idx="32">severity</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="35">neuropathy</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="32">severity</governor>
+            <dependent idx="35">neuropathy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="6">
+        <tokens>
+          <token id="1">
+            <word>Five</word>
+            <lemma>five</lemma>
+            <CharacterOffsetBegin>754</CharacterOffsetBegin>
+            <CharacterOffsetEnd>758</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>5.0</NormalizedNER>
+          </token>
+          <token id="2">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>759</CharacterOffsetBegin>
+            <CharacterOffsetEnd>762</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>MISC</NER>
+          </token>
+          <token id="3">
+            <word>false</word>
+            <lemma>false</lemma>
+            <CharacterOffsetBegin>763</CharacterOffsetBegin>
+            <CharacterOffsetEnd>768</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>positives</word>
+            <lemma>positive</lemma>
+            <CharacterOffsetBegin>769</CharacterOffsetBegin>
+            <CharacterOffsetEnd>778</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>were</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>779</CharacterOffsetBegin>
+            <CharacterOffsetEnd>783</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>noted</word>
+            <lemma>note</lemma>
+            <CharacterOffsetBegin>784</CharacterOffsetBegin>
+            <CharacterOffsetEnd>789</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>789</CharacterOffsetBegin>
+            <CharacterOffsetEnd>790</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>including</word>
+            <lemma>include</lemma>
+            <CharacterOffsetBegin>791</CharacterOffsetBegin>
+            <CharacterOffsetEnd>800</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>three</word>
+            <lemma>three</lemma>
+            <CharacterOffsetBegin>801</CharacterOffsetBegin>
+            <CharacterOffsetEnd>806</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>3.0</NormalizedNER>
+          </token>
+          <token id="10">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>807</CharacterOffsetBegin>
+            <CharacterOffsetEnd>809</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>810</CharacterOffsetBegin>
+            <CharacterOffsetEnd>813</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>thigh</word>
+            <lemma>thigh</lemma>
+            <CharacterOffsetBegin>814</CharacterOffsetBegin>
+            <CharacterOffsetEnd>819</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>muscles</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>820</CharacterOffsetBegin>
+            <CharacterOffsetEnd>827</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>827</CharacterOffsetBegin>
+            <CharacterOffsetEnd>828</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (CD Five) (NNP MRI) (JJ false) (NNS positives)) (VP (VBD were) (VP (VBN noted) (, ,) (PP (VBG including) (NP (NP (CD three)) (PP (IN in) (NP (DT the) (NN thigh) (NNS muscles))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="num">
+            <governor idx="4">positives</governor>
+            <dependent idx="1">Five</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">positives</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">positives</governor>
+            <dependent idx="3">false</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="4">positives</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="5">were</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">noted</governor>
+            <dependent idx="8">including</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">including</governor>
+            <dependent idx="9">three</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">three</governor>
+            <dependent idx="10">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="13">muscles</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">muscles</governor>
+            <dependent idx="12">thigh</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">in</governor>
+            <dependent idx="13">muscles</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="num">
+            <governor idx="4">positives</governor>
+            <dependent idx="1">Five</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">positives</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">positives</governor>
+            <dependent idx="3">false</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="4">positives</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="5">were</dependent>
+          </dep>
+          <dep type="prep_including">
+            <governor idx="6">noted</governor>
+            <dependent idx="9">three</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="13">muscles</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">muscles</governor>
+            <dependent idx="12">thigh</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="9">three</governor>
+            <dependent idx="13">muscles</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="num">
+            <governor idx="4">positives</governor>
+            <dependent idx="1">Five</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">positives</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">positives</governor>
+            <dependent idx="3">false</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="4">positives</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="6">noted</governor>
+            <dependent idx="5">were</dependent>
+          </dep>
+          <dep type="prep_including">
+            <governor idx="6">noted</governor>
+            <dependent idx="9">three</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="13">muscles</governor>
+            <dependent idx="11">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">muscles</governor>
+            <dependent idx="12">thigh</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="9">three</governor>
+            <dependent idx="13">muscles</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="7">
+        <tokens>
+          <token id="1">
+            <word>Muscle</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>830</CharacterOffsetBegin>
+            <CharacterOffsetEnd>836</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>837</CharacterOffsetBegin>
+            <CharacterOffsetEnd>840</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>841</CharacterOffsetBegin>
+            <CharacterOffsetEnd>843</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>844</CharacterOffsetBegin>
+            <CharacterOffsetEnd>846</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>alternative</word>
+            <lemma>alternative</lemma>
+            <CharacterOffsetBegin>847</CharacterOffsetBegin>
+            <CharacterOffsetEnd>858</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>tool</word>
+            <lemma>tool</lemma>
+            <CharacterOffsetBegin>859</CharacterOffsetBegin>
+            <CharacterOffsetEnd>863</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>864</CharacterOffsetBegin>
+            <CharacterOffsetEnd>866</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>EMG</word>
+            <lemma>EMG</lemma>
+            <CharacterOffsetBegin>867</CharacterOffsetBegin>
+            <CharacterOffsetEnd>870</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="9">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>871</CharacterOffsetBegin>
+            <CharacterOffsetEnd>873</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>proximal</word>
+            <lemma>proximal</lemma>
+            <CharacterOffsetBegin>874</CharacterOffsetBegin>
+            <CharacterOffsetEnd>882</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>882</CharacterOffsetBegin>
+            <CharacterOffsetEnd>883</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>mild</word>
+            <lemma>mild</lemma>
+            <CharacterOffsetBegin>884</CharacterOffsetBegin>
+            <CharacterOffsetEnd>888</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>888</CharacterOffsetBegin>
+            <CharacterOffsetEnd>889</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>890</CharacterOffsetBegin>
+            <CharacterOffsetEnd>892</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>chronic</word>
+            <lemma>chronic</lemma>
+            <CharacterOffsetBegin>893</CharacterOffsetBegin>
+            <CharacterOffsetEnd>900</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>clinical</word>
+            <lemma>clinical</lemma>
+            <CharacterOffsetBegin>901</CharacterOffsetBegin>
+            <CharacterOffsetEnd>909</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>diagnoses</word>
+            <lemma>diagnosis</lemma>
+            <CharacterOffsetBegin>910</CharacterOffsetBegin>
+            <CharacterOffsetEnd>919</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>920</CharacterOffsetBegin>
+            <CharacterOffsetEnd>922</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>lower</word>
+            <lemma>lower</lemma>
+            <CharacterOffsetBegin>923</CharacterOffsetBegin>
+            <CharacterOffsetEnd>928</CharacterOffsetEnd>
+            <POS>JJR</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>limb</word>
+            <lemma>limb</lemma>
+            <CharacterOffsetBegin>929</CharacterOffsetBegin>
+            <CharacterOffsetEnd>933</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>focal</word>
+            <lemma>focal</lemma>
+            <CharacterOffsetBegin>934</CharacterOffsetBegin>
+            <CharacterOffsetEnd>939</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>neuropathies</word>
+            <lemma>neuropathy</lemma>
+            <CharacterOffsetBegin>940</CharacterOffsetBegin>
+            <CharacterOffsetEnd>952</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="23">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>952</CharacterOffsetBegin>
+            <CharacterOffsetEnd>953</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NN Muscle) (NNP MRI)) (VP (VBZ is) (NP (NP (DT an) (JJ alternative) (NN tool)) (PP (TO to) (NP (NP (NNP EMG)) (PP (IN in) (NP (NP (ADJP (JJ proximal) (, ,) (JJ mild))) (, ,) (CC or) (NP (NP (JJ chronic) (JJ clinical) (NNS diagnoses)) (PP (IN of) (NP (JJR lower) (NN limb) (JJ focal) (NNS neuropathies)))))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">tool</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">tool</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">tool</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">tool</governor>
+            <dependent idx="5">alternative</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">tool</governor>
+            <dependent idx="7">to</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">to</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">EMG</governor>
+            <dependent idx="9">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">mild</governor>
+            <dependent idx="10">proximal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">in</governor>
+            <dependent idx="12">mild</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="12">mild</governor>
+            <dependent idx="14">or</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="15">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="16">clinical</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="12">mild</governor>
+            <dependent idx="17">diagnoses</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="18">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="19">lower</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="20">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="21">focal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="18">of</governor>
+            <dependent idx="22">neuropathies</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">tool</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">tool</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">tool</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">tool</governor>
+            <dependent idx="5">alternative</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="6">tool</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">mild</governor>
+            <dependent idx="10">proximal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="8">EMG</governor>
+            <dependent idx="12">mild</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="15">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="16">clinical</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="12">mild</governor>
+            <dependent idx="17">diagnoses</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="19">lower</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="20">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="21">focal</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="22">neuropathies</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">MRI</governor>
+            <dependent idx="1">Muscle</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">tool</governor>
+            <dependent idx="2">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">tool</governor>
+            <dependent idx="3">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">tool</governor>
+            <dependent idx="4">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">tool</governor>
+            <dependent idx="5">alternative</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="6">tool</governor>
+            <dependent idx="8">EMG</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">mild</governor>
+            <dependent idx="10">proximal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="8">EMG</governor>
+            <dependent idx="12">mild</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="15">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="16">clinical</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="8">EMG</governor>
+            <dependent idx="17">diagnoses</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="12">mild</governor>
+            <dependent idx="17">diagnoses</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="19">lower</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="20">limb</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="22">neuropathies</governor>
+            <dependent idx="21">focal</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="17">diagnoses</governor>
+            <dependent idx="22">neuropathies</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="8">
+        <tokens>
+          <token id="1">
+            <word>However</word>
+            <lemma>however</lemma>
+            <CharacterOffsetBegin>954</CharacterOffsetBegin>
+            <CharacterOffsetEnd>961</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>961</CharacterOffsetBegin>
+            <CharacterOffsetEnd>962</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>it</word>
+            <lemma>it</lemma>
+            <CharacterOffsetBegin>963</CharacterOffsetBegin>
+            <CharacterOffsetEnd>965</CharacterOffsetEnd>
+            <POS>PRP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>also</word>
+            <lemma>also</lemma>
+            <CharacterOffsetBegin>966</CharacterOffsetBegin>
+            <CharacterOffsetEnd>970</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>seems</word>
+            <lemma>seem</lemma>
+            <CharacterOffsetBegin>971</CharacterOffsetBegin>
+            <CharacterOffsetEnd>976</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>prone</word>
+            <lemma>prone</lemma>
+            <CharacterOffsetBegin>977</CharacterOffsetBegin>
+            <CharacterOffsetEnd>982</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>983</CharacterOffsetBegin>
+            <CharacterOffsetEnd>985</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>false-positive</word>
+            <lemma>false-positive</lemma>
+            <CharacterOffsetBegin>986</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1000</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>results</word>
+            <lemma>result</lemma>
+            <CharacterOffsetBegin>1001</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1008</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>1008</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1009</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>particularly</word>
+            <lemma>particularly</lemma>
+            <CharacterOffsetBegin>1010</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1022</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>1023</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1025</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>proximal</word>
+            <lemma>proximal</lemma>
+            <CharacterOffsetBegin>1026</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1034</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>muscles</word>
+            <lemma>muscle</lemma>
+            <CharacterOffsetBegin>1035</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1042</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>1042</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1043</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (ADVP (RB However)) (, ,) (NP (PRP it)) (ADVP (RB also)) (VP (VBZ seems) (ADJP (JJ prone) (PP (TO to) (NP (JJ false-positive) (NNS results)))) (, ,) (ADVP (RB particularly)) (PP (IN in) (NP (JJ proximal) (NNS muscles)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">prone</governor>
+            <dependent idx="3">it</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="4">also</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">prone</governor>
+            <dependent idx="5">seems</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">prone</governor>
+            <dependent idx="7">to</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">results</governor>
+            <dependent idx="8">false-positive</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">to</governor>
+            <dependent idx="9">results</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="11">particularly</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">prone</governor>
+            <dependent idx="12">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">muscles</governor>
+            <dependent idx="13">proximal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="12">in</governor>
+            <dependent idx="14">muscles</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">prone</governor>
+            <dependent idx="3">it</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="4">also</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">prone</governor>
+            <dependent idx="5">seems</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">results</governor>
+            <dependent idx="8">false-positive</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="6">prone</governor>
+            <dependent idx="9">results</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="11">particularly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">muscles</governor>
+            <dependent idx="13">proximal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="6">prone</governor>
+            <dependent idx="14">muscles</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="1">However</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">prone</governor>
+            <dependent idx="3">it</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="4">also</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="6">prone</governor>
+            <dependent idx="5">seems</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">results</governor>
+            <dependent idx="8">false-positive</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="6">prone</governor>
+            <dependent idx="9">results</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="6">prone</governor>
+            <dependent idx="11">particularly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="14">muscles</governor>
+            <dependent idx="13">proximal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="6">prone</governor>
+            <dependent idx="14">muscles</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -76,8 +76,27 @@ class UnigramModel:
 
 mannd_pkochar_dic = pyphen.Pyphen(lang='en_US')
 
-def calculate_word_features(excerpt):
-    words = word_tokenize(excerpt.lower())
+
+def map_word_features(xml_filename, pos_tag_list):
+    tags = Counter()
+    with open(xml_filename, "r") as file:
+        element = ET.parse(file)
+        POS_xpath = "./document/sentences/sentence/tokens/token/POS"
+        [element.findall(token_xpath)]
+
+    # total counts
+    n = sum(tags.values())
+
+    # avoid div by 0
+    if (n == 0):
+        print("0 sucks")
+        return [0 for dep in pos_tag_list]
+
+    # return frequency of each tag in the file
+    return [tags[tag] / n for tag in pos_tag_list]
+
+
+def calculate_word_features(words):
     counter = Counter(words)
     word_lengths = [len(k) for k, v in counter.items() for x in range(0, v)]
     median_word = median(word_lengths)

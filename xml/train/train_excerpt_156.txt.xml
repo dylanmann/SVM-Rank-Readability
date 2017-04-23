@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>MRI</word>
+            <lemma>MRI</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>3</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>4</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>now</word>
+            <lemma>now</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>PRESENT_REF</NormalizedNER>
+            <Timex tid="t1" type="DATE">PRESENT_REF</Timex>
+          </token>
+          <token id="4">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>14</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>method</word>
+            <lemma>method</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>choice</word>
+            <lemma>choice</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>31</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>32</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>bone</word>
+            <lemma>bone</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>marrow</word>
+            <lemma>marrow</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>imaging</word>
+            <lemma>imaging</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP MRI)) (VP (VBZ is) (ADVP (RB now)) (NP (NP (DT the) (NN method)) (PP (IN of) (NP (NP (NN choice)) (PP (IN for) (NP (NN bone) (NN marrow) (NN imaging))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">method</governor>
+            <dependent idx="1">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">method</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">method</governor>
+            <dependent idx="3">now</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">method</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="7">choice</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">choice</governor>
+            <dependent idx="8">for</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="9">bone</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="10">marrow</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">for</governor>
+            <dependent idx="11">imaging</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">method</governor>
+            <dependent idx="1">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">method</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">method</governor>
+            <dependent idx="3">now</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="5">method</governor>
+            <dependent idx="7">choice</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="9">bone</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="10">marrow</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="7">choice</governor>
+            <dependent idx="11">imaging</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">method</governor>
+            <dependent idx="1">MRI</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">method</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">method</governor>
+            <dependent idx="3">now</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">method</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="5">method</governor>
+            <dependent idx="7">choice</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="9">bone</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">imaging</governor>
+            <dependent idx="10">marrow</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="7">choice</governor>
+            <dependent idx="11">imaging</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>The</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>MR</word>
+            <lemma>mr</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>appearance</word>
+            <lemma>appearance</lemma>
+            <CharacterOffsetBegin>64</CharacterOffsetBegin>
+            <CharacterOffsetEnd>74</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>bone</word>
+            <lemma>bone</lemma>
+            <CharacterOffsetBegin>78</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>marrow</word>
+            <lemma>marrow</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>89</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>90</CharacterOffsetBegin>
+            <CharacterOffsetEnd>92</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>influenced</word>
+            <lemma>influence</lemma>
+            <CharacterOffsetBegin>93</CharacterOffsetBegin>
+            <CharacterOffsetEnd>103</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>by</word>
+            <lemma>by</lemma>
+            <CharacterOffsetBegin>104</CharacterOffsetBegin>
+            <CharacterOffsetEnd>106</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>107</CharacterOffsetBegin>
+            <CharacterOffsetEnd>110</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>relative</word>
+            <lemma>relative</lemma>
+            <CharacterOffsetBegin>111</CharacterOffsetBegin>
+            <CharacterOffsetEnd>119</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>amounts</word>
+            <lemma>amount</lemma>
+            <CharacterOffsetBegin>120</CharacterOffsetBegin>
+            <CharacterOffsetEnd>127</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>128</CharacterOffsetBegin>
+            <CharacterOffsetEnd>130</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>its</word>
+            <lemma>its</lemma>
+            <CharacterOffsetBegin>131</CharacterOffsetBegin>
+            <CharacterOffsetEnd>134</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>fatty</word>
+            <lemma>fatty</lemma>
+            <CharacterOffsetBegin>135</CharacterOffsetBegin>
+            <CharacterOffsetEnd>140</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>141</CharacterOffsetBegin>
+            <CharacterOffsetEnd>143</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>hematopoietic</word>
+            <lemma>hematopoietic</lemma>
+            <CharacterOffsetBegin>144</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>components</word>
+            <lemma>component</lemma>
+            <CharacterOffsetBegin>158</CharacterOffsetBegin>
+            <CharacterOffsetEnd>168</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>168</CharacterOffsetBegin>
+            <CharacterOffsetEnd>169</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (DT The) (NN MR) (NN appearance)) (PP (IN of) (NP (NN bone) (NN marrow)))) (VP (VBZ is) (VP (VBN influenced) (PP (IN by) (NP (NP (DT the) (JJ relative) (NNS amounts)) (PP (IN of) (NP (NP (PRP$ its) (NN fatty)) (CC or) (NP (JJ hematopoietic) (NNS components)))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="3">appearance</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">appearance</governor>
+            <dependent idx="2">MR</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="3">appearance</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">appearance</governor>
+            <dependent idx="4">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">marrow</governor>
+            <dependent idx="5">bone</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">of</governor>
+            <dependent idx="6">marrow</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="7">is</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">influenced</governor>
+            <dependent idx="9">by</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">amounts</governor>
+            <dependent idx="10">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">amounts</governor>
+            <dependent idx="11">relative</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">by</governor>
+            <dependent idx="12">amounts</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">amounts</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="15">fatty</governor>
+            <dependent idx="14">its</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="15">fatty</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="15">fatty</governor>
+            <dependent idx="16">or</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">components</governor>
+            <dependent idx="17">hematopoietic</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="15">fatty</governor>
+            <dependent idx="18">components</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="3">appearance</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">appearance</governor>
+            <dependent idx="2">MR</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="3">appearance</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">marrow</governor>
+            <dependent idx="5">bone</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="3">appearance</governor>
+            <dependent idx="6">marrow</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="7">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">amounts</governor>
+            <dependent idx="10">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">amounts</governor>
+            <dependent idx="11">relative</dependent>
+          </dep>
+          <dep type="agent">
+            <governor idx="8">influenced</governor>
+            <dependent idx="12">amounts</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="15">fatty</governor>
+            <dependent idx="14">its</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">amounts</governor>
+            <dependent idx="15">fatty</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">components</governor>
+            <dependent idx="17">hematopoietic</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="15">fatty</governor>
+            <dependent idx="18">components</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="3">appearance</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">appearance</governor>
+            <dependent idx="2">MR</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="3">appearance</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">marrow</governor>
+            <dependent idx="5">bone</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="3">appearance</governor>
+            <dependent idx="6">marrow</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="8">influenced</governor>
+            <dependent idx="7">is</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="12">amounts</governor>
+            <dependent idx="10">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">amounts</governor>
+            <dependent idx="11">relative</dependent>
+          </dep>
+          <dep type="agent">
+            <governor idx="8">influenced</governor>
+            <dependent idx="12">amounts</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="15">fatty</governor>
+            <dependent idx="14">its</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">amounts</governor>
+            <dependent idx="15">fatty</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">components</governor>
+            <dependent idx="17">hematopoietic</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">amounts</governor>
+            <dependent idx="18">components</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="15">fatty</governor>
+            <dependent idx="18">components</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="3">
+        <tokens>
+          <token id="1">
+            <word>In</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>170</CharacterOffsetBegin>
+            <CharacterOffsetEnd>172</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>173</CharacterOffsetBegin>
+            <CharacterOffsetEnd>176</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>following</word>
+            <lemma>follow</lemma>
+            <CharacterOffsetBegin>177</CharacterOffsetBegin>
+            <CharacterOffsetEnd>186</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>study</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>187</CharacterOffsetBegin>
+            <CharacterOffsetEnd>192</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>192</CharacterOffsetBegin>
+            <CharacterOffsetEnd>193</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>we</word>
+            <lemma>we</lemma>
+            <CharacterOffsetBegin>194</CharacterOffsetBegin>
+            <CharacterOffsetEnd>196</CharacterOffsetEnd>
+            <POS>PRP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>report</word>
+            <lemma>report</lemma>
+            <CharacterOffsetBegin>197</CharacterOffsetBegin>
+            <CharacterOffsetEnd>203</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>different</word>
+            <lemma>different</lemma>
+            <CharacterOffsetBegin>204</CharacterOffsetBegin>
+            <CharacterOffsetEnd>213</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>patterns</word>
+            <lemma>pattern</lemma>
+            <CharacterOffsetBegin>214</CharacterOffsetBegin>
+            <CharacterOffsetEnd>222</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>223</CharacterOffsetBegin>
+            <CharacterOffsetEnd>225</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>changes</word>
+            <lemma>change</lemma>
+            <CharacterOffsetBegin>226</CharacterOffsetBegin>
+            <CharacterOffsetEnd>233</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>consistent</word>
+            <lemma>consistent</lemma>
+            <CharacterOffsetBegin>234</CharacterOffsetBegin>
+            <CharacterOffsetEnd>244</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>245</CharacterOffsetBegin>
+            <CharacterOffsetEnd>249</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>reconversion</word>
+            <lemma>reconversion</lemma>
+            <CharacterOffsetBegin>250</CharacterOffsetBegin>
+            <CharacterOffsetEnd>262</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>into</word>
+            <lemma>into</lemma>
+            <CharacterOffsetBegin>263</CharacterOffsetBegin>
+            <CharacterOffsetEnd>267</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="16">
+            <word>hematopoietic</word>
+            <lemma>hematopoietic</lemma>
+            <CharacterOffsetBegin>268</CharacterOffsetBegin>
+            <CharacterOffsetEnd>281</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="17">
+            <word>tissue</word>
+            <lemma>tissue</lemma>
+            <CharacterOffsetBegin>282</CharacterOffsetBegin>
+            <CharacterOffsetEnd>288</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="18">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>289</CharacterOffsetBegin>
+            <CharacterOffsetEnd>291</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="19">
+            <word>fatty</word>
+            <lemma>fatty</lemma>
+            <CharacterOffsetBegin>292</CharacterOffsetBegin>
+            <CharacterOffsetEnd>297</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="20">
+            <word>marrow</word>
+            <lemma>marrow</lemma>
+            <CharacterOffsetBegin>298</CharacterOffsetBegin>
+            <CharacterOffsetEnd>304</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="21">
+            <word>that</word>
+            <lemma>that</lemma>
+            <CharacterOffsetBegin>305</CharacterOffsetBegin>
+            <CharacterOffsetEnd>309</CharacterOffsetEnd>
+            <POS>WDT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="22">
+            <word>were</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>310</CharacterOffsetBegin>
+            <CharacterOffsetEnd>314</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="23">
+            <word>observed</word>
+            <lemma>observe</lemma>
+            <CharacterOffsetBegin>315</CharacterOffsetBegin>
+            <CharacterOffsetEnd>323</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="24">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>324</CharacterOffsetBegin>
+            <CharacterOffsetEnd>326</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="25">
+            <word>3</word>
+            <lemma>3</lemma>
+            <CharacterOffsetBegin>327</CharacterOffsetBegin>
+            <CharacterOffsetEnd>328</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>3.0</NormalizedNER>
+          </token>
+          <token id="26">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>329</CharacterOffsetBegin>
+            <CharacterOffsetEnd>337</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="27">
+            <word>who</word>
+            <lemma>who</lemma>
+            <CharacterOffsetBegin>338</CharacterOffsetBegin>
+            <CharacterOffsetEnd>341</CharacterOffsetEnd>
+            <POS>WP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="28">
+            <word>received</word>
+            <lemma>receive</lemma>
+            <CharacterOffsetBegin>342</CharacterOffsetBegin>
+            <CharacterOffsetEnd>350</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="29">
+            <word>hematopoietic</word>
+            <lemma>hematopoietic</lemma>
+            <CharacterOffsetBegin>351</CharacterOffsetBegin>
+            <CharacterOffsetEnd>364</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="30">
+            <word>growth</word>
+            <lemma>growth</lemma>
+            <CharacterOffsetBegin>365</CharacterOffsetBegin>
+            <CharacterOffsetEnd>371</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="31">
+            <word>factors</word>
+            <lemma>factor</lemma>
+            <CharacterOffsetBegin>372</CharacterOffsetBegin>
+            <CharacterOffsetEnd>379</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="32">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>380</CharacterOffsetBegin>
+            <CharacterOffsetEnd>382</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="33">
+            <word>combination</word>
+            <lemma>combination</lemma>
+            <CharacterOffsetBegin>383</CharacterOffsetBegin>
+            <CharacterOffsetEnd>394</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="34">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>395</CharacterOffsetBegin>
+            <CharacterOffsetEnd>399</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="35">
+            <word>their</word>
+            <lemma>they</lemma>
+            <CharacterOffsetBegin>400</CharacterOffsetBegin>
+            <CharacterOffsetEnd>405</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="36">
+            <word>chemotherapy</word>
+            <lemma>chemotherapy</lemma>
+            <CharacterOffsetBegin>406</CharacterOffsetBegin>
+            <CharacterOffsetEnd>418</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="37">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>419</CharacterOffsetBegin>
+            <CharacterOffsetEnd>422</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="38">
+            <word>musculo-skeletal</word>
+            <lemma>musculo-skeletal</lemma>
+            <CharacterOffsetBegin>423</CharacterOffsetBegin>
+            <CharacterOffsetEnd>439</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="39">
+            <word>tumors</word>
+            <lemma>tumor</lemma>
+            <CharacterOffsetBegin>440</CharacterOffsetBegin>
+            <CharacterOffsetEnd>446</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="40">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>447</CharacterOffsetBegin>
+            <CharacterOffsetEnd>449</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="41">
+            <word>lower</word>
+            <lemma>lower</lemma>
+            <CharacterOffsetBegin>450</CharacterOffsetBegin>
+            <CharacterOffsetEnd>455</CharacterOffsetEnd>
+            <POS>JJR</POS>
+            <NER>O</NER>
+          </token>
+          <token id="42">
+            <word>limbs</word>
+            <lemma>limb</lemma>
+            <CharacterOffsetBegin>456</CharacterOffsetBegin>
+            <CharacterOffsetEnd>461</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="43">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>461</CharacterOffsetBegin>
+            <CharacterOffsetEnd>462</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (PP (IN In) (NP (DT the) (VBG following) (NN study))) (, ,) (NP (PRP we)) (VP (VBP report) (NP (JJ different) (NNS patterns)) (PP (IN in) (NP (NNS changes))) (ADVP (ADJP (JJ consistent)) (PP (IN with) (NP (NN reconversion))) (PP (IN into) (NP (NP (JJ hematopoietic) (NN tissue)) (PP (IN of) (NP (NN fatty) (NN marrow))) (SBAR (WHNP (WDT that)) (S (VP (VBD were) (VP (VBN observed) (PP (IN in) (NP (NP (CD 3) (NNS patients)) (SBAR (WHNP (WP who)) (S (VP (VBD received) (NP (JJ hematopoietic) (NN growth) (NNS factors)) (PP (IN in) (NP (NN combination))) (PP (IN with) (NP (NP (PRP$ their) (NN chemotherapy)) (PP (IN for) (NP (NP (JJ musculo-skeletal) (NNS tumors)) (PP (IN of) (NP (JJR lower) (NNS limbs)))))))))))))))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="7">report</governor>
+            <dependent idx="1">In</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="2">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">following</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="1">In</governor>
+            <dependent idx="4">study</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">report</governor>
+            <dependent idx="6">we</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">patterns</governor>
+            <dependent idx="8">different</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">report</governor>
+            <dependent idx="9">patterns</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">report</governor>
+            <dependent idx="10">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">in</governor>
+            <dependent idx="11">changes</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="7">report</governor>
+            <dependent idx="12">consistent</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">consistent</governor>
+            <dependent idx="13">with</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">with</governor>
+            <dependent idx="14">reconversion</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">consistent</governor>
+            <dependent idx="15">into</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="16">hematopoietic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="15">into</governor>
+            <dependent idx="17">tissue</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="17">tissue</governor>
+            <dependent idx="18">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">marrow</governor>
+            <dependent idx="19">fatty</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="18">of</governor>
+            <dependent idx="20">marrow</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="21">that</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="22">were</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="23">observed</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">observed</governor>
+            <dependent idx="24">in</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="26">patients</governor>
+            <dependent idx="25">3</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="24">in</governor>
+            <dependent idx="26">patients</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="28">received</governor>
+            <dependent idx="27">who</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="26">patients</governor>
+            <dependent idx="28">received</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="31">factors</governor>
+            <dependent idx="29">hematopoietic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">factors</governor>
+            <dependent idx="30">growth</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="28">received</governor>
+            <dependent idx="31">factors</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="28">received</governor>
+            <dependent idx="32">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="32">in</governor>
+            <dependent idx="33">combination</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="28">received</governor>
+            <dependent idx="34">with</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="35">their</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="34">with</governor>
+            <dependent idx="36">chemotherapy</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="37">for</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="39">tumors</governor>
+            <dependent idx="38">musculo-skeletal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="37">for</governor>
+            <dependent idx="39">tumors</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="39">tumors</governor>
+            <dependent idx="40">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">limbs</governor>
+            <dependent idx="41">lower</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="40">of</governor>
+            <dependent idx="42">limbs</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="2">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">following</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">report</governor>
+            <dependent idx="4">study</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">report</governor>
+            <dependent idx="6">we</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">patterns</governor>
+            <dependent idx="8">different</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">report</governor>
+            <dependent idx="9">patterns</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">report</governor>
+            <dependent idx="11">changes</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="7">report</governor>
+            <dependent idx="12">consistent</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="12">consistent</governor>
+            <dependent idx="14">reconversion</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="16">hematopoietic</dependent>
+          </dep>
+          <dep type="prep_into">
+            <governor idx="12">consistent</governor>
+            <dependent idx="17">tissue</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">marrow</governor>
+            <dependent idx="19">fatty</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="17">tissue</governor>
+            <dependent idx="20">marrow</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="21">that</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="22">were</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="23">observed</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="26">patients</governor>
+            <dependent idx="25">3</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="23">observed</governor>
+            <dependent idx="26">patients</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="28">received</governor>
+            <dependent idx="27">who</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="26">patients</governor>
+            <dependent idx="28">received</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="31">factors</governor>
+            <dependent idx="29">hematopoietic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">factors</governor>
+            <dependent idx="30">growth</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="28">received</governor>
+            <dependent idx="31">factors</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="28">received</governor>
+            <dependent idx="33">combination</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="35">their</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="28">received</governor>
+            <dependent idx="36">chemotherapy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="39">tumors</governor>
+            <dependent idx="38">musculo-skeletal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="39">tumors</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">limbs</governor>
+            <dependent idx="41">lower</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="39">tumors</governor>
+            <dependent idx="42">limbs</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="2">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">following</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">report</governor>
+            <dependent idx="4">study</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">report</governor>
+            <dependent idx="6">we</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">patterns</governor>
+            <dependent idx="8">different</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">report</governor>
+            <dependent idx="9">patterns</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">report</governor>
+            <dependent idx="11">changes</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="7">report</governor>
+            <dependent idx="12">consistent</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="12">consistent</governor>
+            <dependent idx="14">reconversion</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="16">hematopoietic</dependent>
+          </dep>
+          <dep type="prep_into">
+            <governor idx="12">consistent</governor>
+            <dependent idx="17">tissue</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">marrow</governor>
+            <dependent idx="19">fatty</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="17">tissue</governor>
+            <dependent idx="20">marrow</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="21">that</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="23">observed</governor>
+            <dependent idx="22">were</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="17">tissue</governor>
+            <dependent idx="23">observed</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="26">patients</governor>
+            <dependent idx="25">3</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="23">observed</governor>
+            <dependent idx="26">patients</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="28">received</governor>
+            <dependent idx="27">who</dependent>
+          </dep>
+          <dep type="rcmod">
+            <governor idx="26">patients</governor>
+            <dependent idx="28">received</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="31">factors</governor>
+            <dependent idx="29">hematopoietic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">factors</governor>
+            <dependent idx="30">growth</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="28">received</governor>
+            <dependent idx="31">factors</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="28">received</governor>
+            <dependent idx="33">combination</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="35">their</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="28">received</governor>
+            <dependent idx="36">chemotherapy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="39">tumors</governor>
+            <dependent idx="38">musculo-skeletal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="36">chemotherapy</governor>
+            <dependent idx="39">tumors</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">limbs</governor>
+            <dependent idx="41">lower</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="39">tumors</governor>
+            <dependent idx="42">limbs</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>
