@@ -3,7 +3,7 @@
 Dylan Mann, Pia Kochar
 mannd, pkochar
 
-## [Final Report](Report.pdf)
+## [You can view the final report on our findings here](Report.pdf)
 
 Instructions to run the code:
 
