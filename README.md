@@ -3,6 +3,8 @@
 Dylan Mann, Pia Kochar
 mannd, pkochar
 
+## [Final Report](Report.pdf)
+
 Instructions to run the code:
 
 To run our code, you need to first convert your excerpts into one excerpt per file (this can be done using a variation of the function `convert_to_files()`, and then put them into the proper location and edit the output_dir variable in `run_corenlp.sh` to use the proper directories.  Then you run that script from anywhere on eniac or the biglab machines.  Then you must run the two functions.
@@ -26,4 +28,4 @@ Once you have the executable for your system, you train it using the command
 and classify the test data with the command:
 `svm_rank_classify test.dat model.dat predictions.txt`
 
-and your 50 predicted values will be in the proper format in predcitions.txt
+and your 50 predicted values will be in the proper format in predictions.txt
