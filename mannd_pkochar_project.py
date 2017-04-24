@@ -402,7 +402,7 @@ def generate_svm_rank_train():
     # np.save("train_only_universal", X_train)
     y = open("data/project_train_scores.txt", "r").read().splitlines()
 
-    outfile = open("trainb6.dat", "w")
+    outfile = open("train.dat", "w")
     print("running svm file generator train")
     for i in range(0, len(X_train)):
         outfile.write(y[i] + " qid:1 ")
@@ -419,7 +419,7 @@ def generate_svm_rank_test():
     X_test = make_X("xml/test", "xml/train")
     # np.save("test_only_universal", X_test)
 
-    outfile = open("testb6.dat", "w")
+    outfile = open("test.dat", "w")
     print("running svm file generator test")
     for i in range(0, len(X_test)):
         outfile.write("1 qid:1 ")
