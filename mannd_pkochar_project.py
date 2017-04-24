@@ -2,12 +2,13 @@ import subprocess
 import xml.etree.ElementTree as ET
 import os
 from collections import Counter
-# from pprint import pprint
+from pprint import pprint
 from statistics import median, mean
 import math
 from numpy import array, concatenate
 import numpy as np
 import re
+from more_itertools import unique_everseen
 
 import pyphen
 
@@ -39,14 +40,14 @@ def convert_to_files():
         i = 0
         for line in inFile:
             i += 1
-            with open('test_excerpt_' + str(i), "w") as out:
+            with open('train_excerpt_' + str(i), "w") as out:
                 out.write(line)
 
     with open("/home1/c/cis530/project/data/project_test.txt", 'r') as inFile:
         i = 0
         for line in inFile:
             i += 1
-            with open('train_excerpt_' + str(i), "w") as out:
+            with open('test_excerpt_' + str(i), "w") as out:
                 out.write(line)
 
 # ================== Unigram Model ==============
@@ -68,13 +69,51 @@ class UnigramModel:
         return math.log(self.counter[target_word] / self.n, 2)
 
 
+def log_feat(counter, n, filename):
+    words = lemmas(filename)
+    total = 0
+    for word in words:
+        if word not in counter:
+            prob = math.log(.25 / n, 2)
+        else:
+            prob = math.log(counter[word] / n, 2)
+        total += prob
+    return total / (len(words) / 50)
+
+
+def unigramFile(xml_filename):
+    with open(xml_filename, "r") as file:
+        element = ET.parse(file)
+        lem_xpath = "./document/sentences/sentence/tokens/token/lemma"
+        lems = Counter(word.text for word in element.findall(lem_xpath))
+    return lems
+
+
+def lemmas(xml_filename):
+    with open(xml_filename, "r") as file:
+        element = ET.parse(file)
+        lem_xpath = "./document/sentences/sentence/tokens/token/lemma"
+        lems = [word.text for word in element.findall(lem_xpath)]
+    return lems
+
+
+def makeUnigramModel(xml_dir):
+    model = Counter()
+    for file in get_all_files(xml_dir):
+        c = unigramFile(file)
+        model.update(c)
+    for w in model:
+        model[w] += .25
+    return model, sum(model.values())
+
 #  ================== Various Feature Calculations ==================
 
 
 mannd_pkochar_dic = pyphen.Pyphen(lang='en_US')
 
 
-def map_word_features(xml_filename):
+def map_word_features(xml_filename, counter, n, nyt):
+    # lprob = log_feat(counter, n, xml_filename)
     with open(xml_filename, "r") as file:
         element = ET.parse(file)
         word_xpath = "./document/sentences/sentence/tokens/token/word"
@@ -82,10 +121,16 @@ def map_word_features(xml_filename):
         sent_token_xpath = "./tokens/token"
         words = [word.text.lower() for word in element.findall(word_xpath)]
         sentences = [sent.findall(sent_token_xpath) for sent in element.findall(sentence_xpath)]
-    return calculate_word_features(words, sentences)
+
+    r = calculate_word_features(words, sentences, nyt)
+    # r.append(lprob)
+    return r
 
 
-def calculate_word_features(words, sentences):
+def calculate_word_features(words, sentences, nyt):
+    # words_not_in_nyt = len([k for k in words if k not in nyt.counter])
+    # frac_nyt = words_not_in_nyt / len(words)
+
     counter = Counter(words)
     word_lengths = [len(k) for k, v in counter.items() for x in range(0, v)]
     median_word = median(word_lengths)
@@ -94,11 +139,12 @@ def calculate_word_features(words, sentences):
     num_sentences = len(sentences)
     type_token_ratio = len(counter) / sum(counter.values())
     syllables = [len(mannd_pkochar_dic.inserted(w).split('-')) for w in words]
-    prop_few_syll = sum([0 if s < 5 else 1 for s in syllables]) / len(words)
-    prop_many_syll = 1 - prop_few_syll
+    prop_few_syll = sum([0 if s < 4 else 1 for s in syllables]) / len(words)
+    avg_syllables_per_word = mean(syllables)
+    fk_rating = 206.835 - (1.015 * avg_sentence_length) - (84.6 * avg_syllables_per_word)
 
-    return [median_word, average_word, prop_few_syll, prop_many_syll,
-            avg_sentence_length, num_sentences, type_token_ratio]
+    return [median_word, average_word, prop_few_syll, avg_syllables_per_word,
+            avg_sentence_length, num_sentences, type_token_ratio, fk_rating]# frac_nyt] #]
 
 # ================== POS =====================
 
@@ -145,7 +191,7 @@ def map_universal_tags(feat_vector, pos_tag_list, ptb_map, universal_tag_list):
 
 
 def get_google_map():
-    with open("en-ptb.map", "r") as file:
+    with open("data/en-ptb.map", "r") as file:
         rows = [line.split('\t') for line in file]
         return {row[0]: row[1] for row in rows}
 
@@ -184,34 +230,30 @@ def map_named_entity_tags(xml_filename):
 # ============================ Dependency Parsing =======================
 
 
-def extract_dependencies(xml_dir):
-    deps = set()
-    xpath = "./document/sentences/sentence/basic-dependencies/dep"
-    for filename in get_all_files(xml_dir):
-        with open(filename, "r") as file:
-            element = ET.parse(file)
-            for e in element.findall(xpath):
-                deps.add(e.get("type"))
+# def extract_dependencies(xml_dir):
+#     deps = set()
+#     xpath = "./document/sentences/sentence/basic-dependencies/dep"
+#     for filename in get_all_files(xml_dir):
+#         with open(filename, "r") as file:
+#             element = ET.parse(file)
+#             for e in element.findall(xpath):
+#                 deps.add(e.get("type"))
 
-    return sorted(list(deps))
+#     return sorted(list(deps))
 
 
-def map_dependencies(xml_filename, dep_list):
-    deps = Counter()
+def map_dependencies(xml_filename):
+    deps = 0
     xpath = "./document/sentences/sentence/basic-dependencies/dep"
     with open(xml_filename, "r") as file:
         element = ET.parse(file)
         for e in element.findall(xpath):
-            deps[e.get("type")] += 1
+            deps += 1
 
-    n = sum(deps.values())
+    word_xpath = "./document/sentences/sentence/tokens/token/word"
+    n = len(element.findall(word_xpath))
 
-    if (n == 0):
-        print("0 sucks")
-        return [0 for dep in dep_list]
-
-    return [deps[dep] / n for dep in dep_list]
-
+    return [deps / n]
 
 # =========== Syntax Tree Parsing ==============
 
@@ -253,9 +295,9 @@ def extract_prod_rules(xml_dir):
     return rules
 
 
-def map_prod_rules(xml_filename, all_rules):
+def map_prod_rules(xml_filename):
     rules = set(parse_file(xml_filename))
-    return [1 if elem in rules else 0 for elem in all_rules]
+    return [len(rules) / len(lemmas(xml_filename))]
 
 # =============== Brown Clustering =======================
 
@@ -288,8 +330,10 @@ def map_brown_clusters(xml_file_path, cluster_code_list, word_cluster_mapping):
 
 
 def createWordFeat(xml_dir):
+    nyt = UnigramModel("data/nytimes_fm.txt")
+    counter, n = makeUnigramModel(xml_dir)
     files = get_all_files(xml_dir)
-    feats = [map_word_features(f) for f in files]
+    feats = [map_word_features(f, counter, n, nyt) for f in files]
     return array(feats)
 
 
@@ -309,14 +353,14 @@ def createNERFeat(xml_dir):
     return array([map_named_entity_tags(file) for file in files])
 
 
-def createDependencyFeat(xml_dir, dep_list):
+def createDependencyFeat(xml_dir):
     files = get_all_files(xml_dir)
-    return array([map_dependencies(f, dep_list) for f in files])
+    return array([map_dependencies(f) for f in files])
 
 
-def createSyntaticProductionFeat(xml_dir, all_rules):
+def createSyntaticProductionFeat(xml_dir):
     files = get_all_files(xml_dir)
-    return array([map_prod_rules(f, all_rules) for f in files])
+    return array([map_prod_rules(f) for f in files])
 
 
 def createBrownClusterFeat(xml_dir, cluster_codes, wc_map):
@@ -328,27 +372,26 @@ def createBrownClusterFeat(xml_dir, cluster_codes, wc_map):
 
 
 def make_X(test_dir, train_dir):
-    brown_file = "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
+    brown_file = "data/brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
     pos_tags = extract_pos_tags(train_dir)
     # entity_list = extract_ner_tags(xml_dir)
-    dep_list = extract_dependencies(test_dir)
+    # dep_list = extract_dependencies(test_dir)
     # all_rules = extract_prod_rules(xml_dir)
-    cluster_codes = generate_word_cluster_codes(brown_file)
-    wc_map = generate_word_cluster_mapping(brown_file)
+    # cluster_codes = generate_word_cluster_codes(brown_file)
+    # wc_map = generate_word_cluster_mapping(brown_file)
     g_map = get_google_map()
-    uni_tags = sorted(g_map.values())
-
+    uni_tags = list(unique_everseen(sorted(g_map.values())))
     pos_vecs = createPOSFeat(test_dir, pos_tags)
 
     print("making magic happen for " + test_dir)
     return concatenate((
         createWordFeat(test_dir),
-        pos_vecs,
+        # pos_vecs,
         createUniversalPOSFeat(pos_vecs, pos_tags, g_map, uni_tags),
         createNERFeat(test_dir),
-        createDependencyFeat(test_dir, dep_list),
-        # createSyntaticProductionFeat(xml_dir, all_rules),
-        createBrownClusterFeat(test_dir, cluster_codes, wc_map)), 1)
+        createDependencyFeat(test_dir),
+        createSyntaticProductionFeat(test_dir)), 1)
+        # createBrownClusterFeat(test_dir, cluster_codes, wc_map)), 1)
 
 
 def generate_svm_rank_train():
@@ -356,10 +399,10 @@ def generate_svm_rank_train():
     #     X_train = np.load("x_train2.npy")
     # except:
     X_train = make_X("xml/train", "xml/train")
-    np.save("x_train_no_syntax", X_train)
+    # np.save("train_only_universal", X_train)
     y = open("data/project_train_scores.txt", "r").read().splitlines()
 
-    outfile = open("train_no_syntax.dat", "w")
+    outfile = open("trainb6.dat", "w")
     print("running svm file generator train")
     for i in range(0, len(X_train)):
         outfile.write(y[i] + " qid:1 ")
@@ -374,9 +417,9 @@ def generate_svm_rank_test():
     #     X_train = np.load("x_train2.npy")
     # except:
     X_test = make_X("xml/test", "xml/train")
-    np.save("x_test_no_syntax", X_test)
+    # np.save("test_only_universal", X_test)
 
-    outfile = open("test_no_syntax.dat", "w")
+    outfile = open("testb6.dat", "w")
     print("running svm file generator test")
     for i in range(0, len(X_test)):
         outfile.write("1 qid:1 ")
